@@ -31,7 +31,6 @@ router.post("/add",function(req,res,next) {
     let make_date = req.body.make_date || ''; // 预约日期
     let make_time = req.body.make_time || ''; // 预约时间
     let play_way = req.body.play_way || ''; // 支付方式
-    let order_name = req.body.order_name || ''; // 产品名称
     let order_price = req.body.order_price || ''; // 房间价格
     let order_endPrice = req.body.order_endPrice || ''; // 房间价格
     let order_per = req.body.order_per || ''; // 房屋平米数
@@ -45,7 +44,7 @@ router.post("/add",function(req,res,next) {
             if(rows[0].coupon_types == 2 ){
                 res.send({code:3}); // 该优惠券已经使用
             }else {
-                let sql = "insert into order_list(user_id,order_oid,user_name,user_mobile,user_addree,user_num,order_type,place_time,make_date,make_time,play_way,order_price,order_endPrice,order_per,comm_type,coupon_id,coupon_price,order_name) values('" + user_id + "','" + oid + "','" + user_name + "','" + user_mobile + "','" + user_addree + "','" + user_num + "','" + order_type + "','" + place_time + "','" + make_date + "','" + make_time + "','" + play_way + "','" + order_price + "','" + order_endPrice + "','" + order_per + "','" + comm_type + "','" + coupon_id + "','" + coupon_price + "','" + order_name + "')"
+                let sql = "insert into order_list(user_id,order_oid,user_name,user_mobile,user_addree,user_num,order_type,place_time,make_date,make_time,play_way,order_price,order_endPrice,order_per,comm_type,coupon_id,coupon_price) values('" + user_id + "','" + oid + "','" + user_name + "','" + user_mobile + "','" + user_addree + "','" + user_num + "','" + order_type + "','" + place_time + "','" + make_date + "','" + make_time + "','" + play_way + "','" + order_price + "','" + order_endPrice + "','" + order_per + "','" + comm_type + "','" + coupon_id + "','" + coupon_price + "')"
                 db.query(sql,function(err,rows){
                     if(err){
                         res.send({code:2});
@@ -63,7 +62,7 @@ router.post("/add",function(req,res,next) {
             }
         });
     } else {
-        let sql = "insert into order_list(user_id,order_oid,user_name,user_mobile,user_addree,user_num,order_type,place_time,make_date,make_time,play_way,order_price,order_endPrice,order_per,comm_type,coupon_id,coupon_price,order_name) values('" + user_id + "','" + oid + "','" + user_name + "','" + user_mobile + "','" + user_addree + "','" + user_num + "','" + order_type + "','" + place_time + "','" + make_date + "','" + make_time + "','" + play_way + "','" + order_price + "','" + order_endPrice + "','" + order_per + "','" + comm_type + "','" + coupon_id + "','" + coupon_price + "','" + order_name + "')"
+        let sql = "insert into order_list(user_id,order_oid,user_name,user_mobile,user_addree,user_num,order_type,place_time,make_date,make_time,play_way,order_price,order_endPrice,order_per,comm_type,coupon_id,coupon_price) values('" + user_id + "','" + oid + "','" + user_name + "','" + user_mobile + "','" + user_addree + "','" + user_num + "','" + order_type + "','" + place_time + "','" + make_date + "','" + make_time + "','" + play_way + "','" + order_price + "','" + order_endPrice + "','" + order_per + "','" + comm_type + "','" + coupon_id + "','" + coupon_price + "')"
         db.query(sql,function(err,rows){
             if(err){
                 res.send({code:2});
