@@ -1,0 +1,66 @@
+.box {
+    width: 100%;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+@media screen and (max-width: 420px) {
+    .mapfooter-app-text {
+        margin-top: 30px;
+    }
+}
+
+.mapfooter-app {
+    display: inline-block;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    text-align: left;
+}
+.mapfooter-app-image {
+    position: relative;
+    width: 160px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+.mapfooter-app-image, .mapfooter-app-text {
+    vertical-align: middle;
+    display: inline-block;
+}
+.mapfooter-app-image img {
+    width: 100%;
+}
+.mapfooter-app-image span {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -10px;
+    left: 25px;
+    right: 25px;
+    background-color: #fff;
+    text-align: center;
+    color: #999;
+}
+.mapfooter-app-text {
+    margin-left: 20px;
+    font-size: 16px;
+}
+.mapfooter-app-text strong {
+    font-size: 30px;
+    color: #f74342;
+}
+.mapfooter-app-text p {
+    padding: 0;
+    margin: 0;
+}
+.mapfooter-app-text p:nth-of-type(2) {
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+}

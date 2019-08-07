@@ -1,0 +1,8 @@
+{
+    "appID":"wxe003098e2ab81ade",
+    "appScrect":"ff84ebf9e0a6c27f5f5a324bc50ff5a2",
+    "apiDomain":"http://api.weixin.qq.com/",
+    "apiURL":{
+        "accessTokenApi":"%ssns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code"
+    }
+}
