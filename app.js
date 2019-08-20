@@ -11,6 +11,7 @@ var orderRouter = require('./routes/order');
 var loginRouter = require('./routes/login');
 var timeRouter = require('./routes/time');
 var couponRouter = require('./routes/coupon');
+var waPayRouter = require('./routes/waPay');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/order', orderRouter);
 app.use('/login', loginRouter);
 app.use('/time', timeRouter);
 app.use('/coupon', couponRouter);
+app.use('/pay', waPayRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
