@@ -11,7 +11,7 @@ var orderRouter = require('./routes/order');
 var loginRouter = require('./routes/login');
 var timeRouter = require('./routes/time');
 var couponRouter = require('./routes/coupon');
-var waPayRouter = require('./routes/waPay');
+var waPayRouter = require('./routes/pay');
 
 var app = express();
 
