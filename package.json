@@ -18,7 +18,7 @@
     "morgan": "~1.9.1",
     "mysql": "^2.17.1",
     "node-uuid": "^1.4.8",
-    "qs": "^6.7.0",
+    "qs": "^6.7.3",
     "request": "^2.88.0",
     "silly-datetime": "^0.1.2",
     "xmlreader": "^0.2.3"
